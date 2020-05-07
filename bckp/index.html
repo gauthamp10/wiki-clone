@@ -33,19 +33,17 @@
          function setURL(id){
             $('#loadwiki').attr('src',"https://en.wikipedia.org/?curid=" + id);
         }
-        
-        function fetchRandomWiki(count) {
+        function loadMorePages() {
             baseLink ='https://en.wikipedia.org/?curid='
             console.log("Loading More Random Wiki");
             $.ajax({
-                url: "https://en.wikipedia.org/w/api.php?action=query&list=random&rnnamespace=0&rnlimit="+count+"&format=json&origin=*",
+                url: "https://en.wikipedia.org/w/api.php?action=query&list=random&rnnamespace=0&rnlimit=20&format=json&origin=*",
                 dataType: "jsonp",
         
             // Work with the response
             success: function( response ) {
                 wiki_data = '';
               $.each( response['query']['random'], function( key, val ) {
-                  if()
                         id = val['id'];
                         wiki_data += '<tr>';
                         wiki_data += '<td>'+val['title']+'</td>';
@@ -64,8 +62,7 @@
         } 
        
 
-     fetchRandomWiki(10)
+     
         
     </script>
-    
 </html>
