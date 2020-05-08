@@ -1,18 +1,19 @@
-$(document).ready(function(){ 
+/* $(document).ready(function(){ 
     $("#search").keyup(function(){ 
       var search = $(this).val(); 
       if(search != ""){ 
          $.ajax({ 
-           url: 'https://en.wikipedia.org/w/api.php?action=opensearch&search='+search+'&limit=150&namespace=0&format=json', 
+           url: 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+search, 
            dataType: 'jsonp', 
            success:function(response){  
            
             $.each(response, function () {
-               
-                
-                title = response[1][0];
-                link = response[3][0];
-                getData(title,link)
+                console.log(response['query']['search'][0]['pageid']);
+                console.log(response['query']['search'][0]['title']);
+                console.log(response['query']['search'][0]['wordcount']);
+                console.log(response['query']['search'][0]['snippet']);
+                $("#search").append("<li value='"+response['query']['search'][0]['title']+"'>"+response['query']['search'][0]['title']+"</li>");
+
                 
             });
            }
@@ -22,7 +23,10 @@ $(document).ready(function(){
         fetchRandomWiki(2);
     }
 });
-});
+}); */
+
+
+
 
 
 
@@ -51,13 +55,17 @@ function fetchRandomWiki(count) {
     });
 }
 
+
+
+
+
 function getData(title, id) {
     $.ajax({
         url: "https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&pithumbsize=200&format=json&titles=" + title,
         dataType: "jsonp",
         success: function (response) {
 
-            $("#wikitable").find("tbody").empty();
+            
             var wiki_data = '';
             var baseLink = 'https://en.wikipedia.org/?curid=';
 
