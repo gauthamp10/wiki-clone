@@ -39,8 +39,8 @@ function placeRandom(response) {
         let heading = val[pageid]['title'];
         if (thumbnail) {
             wiki_data += '<div data-aos="fade-up" class="col-4 col-6-medium col-12-small box box2 tooltip" title="' + heading + '">';
-            wiki_data += '  <a href="#iframe-modal" rel="modal:open"><div class="evenboxinner" id="i' + id + '"> ' + heading + '</div></a>';
-            wiki_data += '<a href=' + baseLink + id + ' target="loadwiki" class="image fit" id="' + id + '"><img src="' + thumbnail['source'] + '"></a>';
+            wiki_data += '  <a href=' + baseLink + id + ' target="loadwiki"><div class="evenboxinner"> ' + heading + '</div></a>';
+            wiki_data += '<a href="#iframe-modal" rel="modal:open"><div class="evenboxinner image fit" id="i' + id + '"><img src="' + thumbnail['source'] + '"></div></a>';
             wiki_data += '<a href="https://en.wikipedia.org/api/rest_v1/page/pdf/' + heading + '"><button>Download Article</button></a>';
             wiki_data += '</div>';
         }
@@ -49,8 +49,8 @@ function placeRandom(response) {
             let fonts = ["lobster", "bebas", "noto", "museo"];
             let font = fonts[Math.floor(Math.random() * fonts.length)];
             wiki_data += '<div data-aos="fade-up" class="col-4 col-6-medium col-12-small box box2 tooltip" title="' + heading + '" >';
-            wiki_data += '  <a href="#iframe-modal" rel="modal:open"><div class="evenboxinner" id="i' + id + '"> ' + heading + '</div></a>';
-            wiki_data += '<td><a href=' + baseLink + id + ' target="loadwiki" class="image fit"><img src="https://fakeimg.pl/200x100/' + rand + '/000/?font=' + font + '&text=' + heading.substring(0, 6) + '..." ></a>';
+            wiki_data += '<a href=' + baseLink + id + ' target="loadwiki"><div class="evenboxinner"> ' + heading + '</div></a>';
+            wiki_data += '<a href="#iframe-modal" rel="modal:open"><div class="evenboxinner image fit" id="i' + id + '"><img src="https://fakeimg.pl/200x100/' + rand + '/000/?font=' + font + '&text=' + heading.substring(0, 6) + '..." ></div></a>';
             wiki_data += '<a href="https://en.wikipedia.org/api/rest_v1/page/pdf/' + heading + '"><button>Download Article</button></a>';
             wiki_data += '</div>';
         }

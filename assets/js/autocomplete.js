@@ -72,11 +72,10 @@ function printPhrases(phrases, el) {
 // Start typing
 function run() {
   let phrases = [
-    "InfiniteWiki",
-    "Wikipedia search",
+    "How ? Where ? When ? What ?",
+    "Search the entire Wikipedia",
     "List of presidents of United States",
-    "How Where When What",
-    "Search the entire Wiki.."
+    "Download articles"
   ];
 
   printPhrases(phrases, $('#search'));

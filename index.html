@@ -13,18 +13,18 @@
 </head>
 
 <body class="is-preload">
-<!--- The modal with ifrmame-->
+	<!--- The modal with ifrmame-->
 	<div class="container">
 		<div id="iframe-modal" class="modal wrap-element">
-			<iframe id="myframe" class="my-iframe" frameborder="0" allowfullscreen></iframe>
+			<iframe id="myframe" class="my-iframe" frameborder="0"></iframe>
 			<a href="#" rel="modal:close">Close</a>
 		</div>
-<!-- end of modal-->
+		<!-- end of modal-->
 
-<!--Placement of sticky objects-->
+		<!--Placement of sticky objects-->
 		<div class="item sticky">
-			<img src="assets/pirate.svg" width="100" alt="Item 1" data-aos="fade-up"><img src="assets/circle.png"
-				class="centered"><span class="centered" id="count"
+			<img onclick="topFunction()" id="Gotop" src="assets/pirate.svg" width="100" alt="Item 1"
+				data-aos="fade-up"><img src="assets/circle.png" class="centered"><span class="centered" id="count"
 				style="color:black;font-weight: bolder;font-size: x-large;"></span>
 		</div>
 	</div>
@@ -47,9 +47,10 @@
 					<h2>Infinite Wiki</h2>
 				</header>
 				<p>
-					Explore the massive collection of online wikipedia resources.
+					Explore wikipedia resources without jumping around.
+					<center style="color: green;font-weight: bolder;"> Click 🖱️ thumbnail🖼️ to view the article</center>
 				</p>
-
+				
 				<form id="searchtag" name="searchtag" method="post" onsubmit="onsubmitSearch();return false;">
 					<div class="row">
 						<div class="col-12">
@@ -70,7 +71,9 @@
 
 			<article id="info" class="panel intro">
 				<header>
-					<h1>Gautham Prkash</h1>
+					<h1>Gautham Prakash</h1>
+					<h3>Website: <a href="https://gauthamp10.github.io" style="text-decoration: 
+					none;">gauthamp10.github.io </a></h3>
 					<p>Developer</p>
 				</header>
 				<a href="#info" class="jumplink pic">
@@ -105,6 +108,27 @@
 		AOS.init();  // To initialize animate on scroll library
 	</script>
 	<!--End of scripts -->
+	<script>
+		//Get the button
+		var mybutton = document.getElementById("Gotop");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () { scrollFunction() };
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
 </body>
 
 </html>
