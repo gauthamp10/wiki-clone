@@ -1,5 +1,7 @@
 # ![icon](https://i.imgur.com/8zmicGw.png) Infinite Wiki
 
+![visitors](https://visitor-badge.glitch.me/badge?page_id=gauthamp10.wiki-clone)
+
 Explore wikipedia resources without jumping around page to page, downlaod article, and infinite random post views.
 
 #### See it in action: 👉 [infinitewiki](https://gauthamp10.github.io/infinitewiki)
