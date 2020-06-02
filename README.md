@@ -14,6 +14,8 @@ Explore wikipedia resources without jumping around page to page, downlaod articl
 
 *Just brushing up my javascript.*
 
+[![HitCount](http://hits.dwyl.com/gauthamp10/musicbot.svg)](http://hits.dwyl.com/gauthamp10/musicbot)
+
 ### Author
 
  **Gautham Prakash**
