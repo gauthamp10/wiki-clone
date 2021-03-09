@@ -4,7 +4,7 @@
 
 Explore wikipedia resources without jumping around page to page, downlaod article, and infinite random post views.
 
-#### See it in action: 👉 [infinitewiki](https://gauthamp10.github.io/infinitewiki)
+#### See it in action: 👉 [infinitewiki](https://infinitewiki.netlify.app/)
 
 ### Screenshots
 
